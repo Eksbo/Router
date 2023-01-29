@@ -1,0 +1,11 @@
+.block{
+    height: 90%;
+    align-items: center;
+    text-align: center;
+
+  
+  }
+.active{
+    color: rgb(48, 43, 43);
+  }
+  
