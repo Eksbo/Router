@@ -1,7 +1,8 @@
 .block{
-    height: 90%;
+   
     align-items: center;
-    text-align: center;
+    text-align: left;
+    padding: 2vh;
 
   
   }

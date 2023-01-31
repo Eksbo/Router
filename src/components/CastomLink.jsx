@@ -2,8 +2,9 @@ import { Link, useMatch } from 'react-router-dom'
 export const CastomLink = ({ children, to, ...props }) => {
 
     const mach = useMatch(to)
-    console.log({ mach });
+    // console.log({ mach });
     return (
+        <div>
         <Link
             style={{
                 color: mach ? 'rgb(96, 92, 92)' : 'white',
@@ -14,6 +15,7 @@ export const CastomLink = ({ children, to, ...props }) => {
             to={to}>
             {children}
         </Link>
+        </div>
     )
 
 }
