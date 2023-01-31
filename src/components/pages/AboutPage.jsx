@@ -1,8 +1,9 @@
 import './page.css'
 import { useState ,useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom'
 export const AboutPage = ()=>{
   const[posts , setPosts]=useState([])
+  // const[SearchParams , setSearchParams]=useSearchParams()
 
   // useEffect(()=>{
   //   fetch('https://jsonplaceholder.tipicode.com/posts')
