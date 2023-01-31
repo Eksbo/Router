@@ -25,7 +25,7 @@ export const HomePage = ()=>{
                   fontSize: "16px",
               }}
                 key={todo.id}
-                to={`home/${todo.id}`}
+                to={`/${todo.id}`}
                 >
                 <li>{todo.title}</li>
                 </Link>
