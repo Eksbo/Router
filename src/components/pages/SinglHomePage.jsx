@@ -7,10 +7,10 @@ export const SiglHomePage = () => {
   async function fechPosts(id) {
     let content;
     let result = await fetch(
-      `https://jsonplaceholder.typicode.com/todos/${id}`
+      `https://jsonplaceholder.typicode.com/todos/${id}  `
     )
     content = await result.json();
-    console.log(content);
+    // console.log(content);
     setPost(content);
   }
   useEffect(() => {

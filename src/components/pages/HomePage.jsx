@@ -6,14 +6,19 @@ export const HomePage = () => {
   const[SearchParams , setSearchParams]=useSearchParams()
 
   const todoQery =SearchParams.get('post') || '' ;
-  // const latest =SearchParams.has('latest')
-  // const startForm = latest ? true :false ;
+  const latest =SearchParams.has('latest')
+  const startForm = latest;
   const handleSubmit = (event)=>{
     event.preventDefault()
     const form = event.target
     const qery =form.search.value
+    const isLasted = form.latest.checked
+    const params={}
+    if(qery.length) { params.post=qery}
+    if(isLasted) {params.latest=true}
+
     
-    setSearchParams({post: qery})
+    setSearchParams(params)
   }
 
   useEffect(() => {
@@ -54,7 +59,7 @@ export const HomePage = () => {
       </form>
       <ul>
         {todos.filter(
-          todo=>todo.title.includes(todoQery)
+          todo=>todo.title.includes(todoQery) && todo.completed === startForm
         ).map((todo) => {
           return (
             <Link
